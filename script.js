@@ -16,7 +16,9 @@ function textToSpeech(text) {
   let utterence = new SpeechSynthesisUtterance(text);
   for (let voice of speech.getVoices()) {
     if (voice.name == voiceOption.value) {
+      console.log(voice)
       utterence.voice = voice;
+      
     }
   }
   speech.speak(utterence);
